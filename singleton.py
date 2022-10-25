@@ -2,10 +2,6 @@ from enum import Enum, auto
 """ Singleton """
 
 
-
-
-
-
 class SingletonException(Exception):
     """ Exception raised when instance of of singleton already exists """
     """ and if_already_initialized is set to ReturnOption.EXCEPTION """
