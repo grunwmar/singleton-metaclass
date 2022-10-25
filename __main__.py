@@ -1,4 +1,4 @@
-from singleton import Singleton, ReturnOption
+from singleton import Singleton
 
 
 class Universe(metaclass=Singleton):
@@ -10,9 +10,10 @@ class Universe(metaclass=Singleton):
         return f"Universe(age={self._age})"
 
 
-Universe.if_already_initialized(ReturnOption.NONE)
-# Universe.if_already_initialized(ReturnOption.INSTANCE)
-# Universe.if_already_initialized(ReturnOption.EXCEPTION)
+# Optional setting of return action
+# Universe.if_already_initialized(IfAlreadyInitialized.RETURN_NONE)
+# Universe.if_already_initialized(IfAlreadyInitialized.RETURN_INSTANCE)
+Universe.if_already_initialized(Singleton.AlreadyInitialized.RETURN_INSTANCE)
 
 universe_1 = Universe(10)
 universe_2 = Universe(5)
