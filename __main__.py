@@ -12,7 +12,7 @@ class Universe(metaclass=Singleton):
 
 # Optional setting of return action
 # Universe.if_already_initialized(IfAlreadyInitialized.RETURN_NONE)
-# Universe.if_already_initialized(IfAlreadyInitialized.RETURN_INSTANCE)
+# Universe.if_already_initialized(IfAlreadyInitialized.EXCEPTION)
 Universe.if_already_initialized(Singleton.AlreadyInitialized.RETURN_INSTANCE)
 
 universe_1 = Universe(10)
